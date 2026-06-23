@@ -1,6 +1,8 @@
 name: Sync Leetcode Past History
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual click
+  schedule:
+    - cron: "0 0 * * *" # Automatically runs every night at midnight UTC
 jobs:
   build:
     runs-on: ubuntu-latest
