@@ -21,36 +21,6 @@ public:
         }
         return l1;
     }
-    ListNode* reverseL1(ListNode* l1) {
-        stack<int> st;
-        ListNode* temp = l1;
-        while (temp != NULL) {
-            st.push(temp->val);
-            temp = temp->next;
-        }
-        temp = l1;
-        while (temp != NULL) {
-            temp->val = st.top();
-            st.pop();
-            temp = temp->next;
-        }
-        return l1;
-    }
-    ListNode* reverseL2(ListNode* l2) {
-        stack<int> st;
-        ListNode* temp = l2;
-        while (temp != NULL) {
-            st.push(temp->val);
-            temp = temp->next;
-        }
-        temp = l2;
-        while (temp != NULL) {
-            temp->val = st.top();
-            st.pop();
-            temp = temp->next;
-        }
-        return l2;
-    }
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     ListNode* temp1 = l1;
     ListNode* temp2 = l2;
